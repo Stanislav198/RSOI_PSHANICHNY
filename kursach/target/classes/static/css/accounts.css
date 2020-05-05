@@ -1,0 +1,114 @@
+h1 {
+    font-family: Arial, cursive;
+    color: #fff200;
+}
+
+table {
+    font-family: Arial, cursive;
+    color: rgba(49, 78, 99, 0.70);
+    text-shadow: 0 0 0.5px #000000;
+    font-size: 21px;
+    border-radius: 15px;
+    border-spacing: 1px;
+    text-align: center;
+}
+
+th {
+    background: #fff200;
+    text-shadow: 0 0 0.5px #000000;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: rgba(0, 0, 0, 0.70);
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+td {
+    padding: 10px 20px;
+    background: #fff242;
+}
+
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+tr td:last-child {
+    border-right: none;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.btn {
+    font-size: 18px;
+    border: none;
+    background: #fff242;
+    outline: none;
+    transition: 0.2s;
+    width: 28px;
+    border-radius: 50%;
+    height: 28px;
+
+}
+
+.btn:hover {
+    background: black;
+    color: #fff242;
+    width: 28px;
+    height: 28px;
+    transition: 0.2s;
+}
+
+.btn:active {
+    margin-top: -10px;
+}
+
+#del:hover {
+    background: red;
+}
+
+#info:hover {
+    background: salmon;
+}
+#sendBtn{
+    outline: none;
+    border-radius: 10px;
+    height: 30px;
+    background: #f4a743;
+    font-weight: bold;
+    color: rgba(49,78,99,0.70);
+    text-shadow: 0 0 0.5px #000000;
+    font-size: 15px;
+    height: 31px;
+    width: 56px;
+    border: rgba(0,0,0,0.70) solid 2px;
+}
+#sendBtn{
+    filter: brightness(120%);
+}
+#sendBtn:hover{
+    filter: brightness(80%);
+}
+#sendBtn:active{
+    margin-top: 6px;
+}

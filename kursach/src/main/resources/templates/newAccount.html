@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/../static/css/newEditAccount.css.css"
+          th:href="@{/css/newEditAccount.css}"/>
+    <link rel="stylesheet" type="text/css" href="C:/kursach/src/main/resources/static/css/newEditAccount.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <title>New</title>
+</head>
+<body>
+<div align="center">
+    <div class="newAccountForm">
+        <h1>New Account</h1>
+        <form action="" method="post" th:action="@{/save}" th:object="${account}">
+            <h3>Login</h3><input required class="newAccountInput" type="text" th:field="*{login}"></br>
+            <h3>Password</h3><input required class="newAccountInput" type="text" th:field="*{password}"></br>
+            <h3>Sex</h3><select class="newAccountInput" required th:field="*{sex}">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select></br>
+            <h3>Birthdate</h3><input class="newAccountInput" id="birthInput" required type="date"
+                                     th:field="*{birthdate}"></br>
+            <h3>Value</h3><input required class="newAccountInput" type="number" th:field="*{value}"></br>
+            <button class="button" type="submit">
+                <i class="fas fa-save"></i>
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

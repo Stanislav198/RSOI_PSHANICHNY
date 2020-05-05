@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/../static/css/authorization.css" th:href="@{/css/authorization.css}"/>
+    <link rel="stylesheet" type="text/css" href="C:/kursach/src/main/resources/static/css/authorization.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <title>Home</title>
+</head>
+<body>
+<div align="center">
+    <div class="authForm">
+        <h1>Priorbank</h1>
+        <form th:action="@{/authorization}" method="post">
+            <div>
+                <h3>Login</h3>
+                <input class="loginInput" type="text" name="username" placeholder="Login"/>
+            </div>
+            <div>
+                <h3>Password</h3>
+                <input class="loginInput" type="password" name="password" placeholder="Password"/>
+            </div>
+            <div>
+                <input class="sendButton" type="submit" value="Send"/>
+            </div>
+
+        </form>
+        <form href="accounts" action="accounts">
+            <div>
+                <button class="sendButton" type="submit">
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </form>
+        <div th:if="${param.success}">
+            Success ! You can push Button!
+        </div>
+        <div th:if="${param.error}">
+            Invalid login or password!
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out!
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/../static/css/detailAccount.css" th:href="@{/css/detailAccount.css}"/>
+    <link rel="stylesheet" type="text/css" href="C:/kursach/src/main/resources/static/css/detailAccount.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <title>Details Page</title>
+</head>
+
+<body>
+<h1 align="center">Details Page</h1>
+<div align="center">
+    <div class="form">
+        <h2 class="text">Account Details</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Login</th>
+                <th>Password</th>
+                <th>Sex</th>
+                <th>Birthdate</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <tr>
+                <td th:text="${account.id}">Id</td>
+                <td th:text="${account.login}">Login</td>
+                <td th:text="${account.password}">Password</td>
+                <td th:text="${account.sex}">Sex</td>
+                <td th:text="${account.birthdate}">Birthdate</td>
+                <td th:text="${account.value}">Value</td>
+            </tr>
+            </tbody>
+        </table>
+        <h2>Credit</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Value</th>
+                <th>Bank</th>
+                <th>Credit Percent</th>
+                <th>Pay</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td th:text="${account.creditdate}">Date</td>
+                <td th:text="${account.creditvalue}">Value</td>
+                <td th:text="${account.creditname}">Bank</td>
+                <td th:text="${account.creditpercent}">Credit Percent</td>
+                <td>
+                    <form action="#" th:action="@{'/payCredit/'+${account.id}}" method="post">
+                        <button class="btn" id="btn1" type="submit">
+                            <i class="fab fa-amazon-pay"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <h2>Deposit</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Value</th>
+                <th>Bank</th>
+                <th>Deposit Percent</th>
+                <th>Pay</th>
+            </tr>
+            <tbody>
+            <tr>
+            <tr>
+                <td th:text="${account.depositdate}">Date</td>
+                <td th:text="${account.depositvalue}">Value</td>
+                <td th:text="${account.depositname}">Value</td>
+                <td th:text="${account.depositpercent}">Value</td>
+                <td>
+                    <form action="#" th:action="@{'/payDeposit/'+${account.id}}" method="post">
+                        <button class="btn" id="btn2" type="submit">
+                            <i class="fab fa-amazon-pay"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+            <form style="display: inline-block" action="" method="post" th:action="@{/back}" th:object="${account}">
+                <button id="button1" class="button" type="submit">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </form>
+            <form style="display: inline-block" action="#" th:action="@{'/creditDet/'+${account.id}}" method="post">
+                <button class="button" type="submit">
+                    <i class="far fa-credit-card"></i>
+                </button>
+            </form>
+            <form style="display: inline-block" action="#" th:action="@{'/depositDet/'+${account.id}}" method="post">
+                <button class="button" type="submit">
+                    <i class="fas fa-university"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

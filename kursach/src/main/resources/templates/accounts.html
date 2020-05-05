@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/../static/css/accounts.css" th:href="@{/css/accounts.css}"/>
+    <link rel="stylesheet" type="text/css" href="C:/kursach/src/main/resources/static/css/accounts.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <title>Accounts</title>
+</head>
+<body>
+<div align="center">
+    <h1>Accounts</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Sex</th>
+            <th>Birthdate</th>
+            <th>Value</th>
+            <th colspan="3">
+                <form action="#" th:action="@{'/new/'}" method="post">
+                    <button id="new" class="btn" type="submit">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </form>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="account : ${listAccounts}">
+            <td th:text="${account.id}">Id</td>
+            <td class="div1" th:text="${account.login}">Login</td>
+            <td class="div1" th:text="${account.password}">Password</td>
+            <td class="div1" th:text="${account.sex}">Sex</td>
+            <td class="div1" th:text="${account.birthdate}">Birthdate</td>
+            <td class="div1" th:text="${account.value}">Value</td>
+            <td>
+                <form action="#" th:action="@{'/edit/' + ${account.id}}" method="post">
+                    <button class="btn" type="submit">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </form>
+            </td>
+
+            <td>
+                <form action="#" th:action="@{'/delete/' + ${account.id}}" method="post">
+                    <button class="btn" type="submit" id="del">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </form>
+            </td>
+
+            <td>
+                <form action="#" th:action="@{'/detail/' + ${account.id}}" method="post">
+                    <button class="btn" type="submit" id="info">
+                        <i class="fas fa-info"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<form th:action="@{/logout}" method="post">
+    <div align="center">
+        <button id="sendBtn" type="submit">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </div>
+</form>
+</body>
+</html>

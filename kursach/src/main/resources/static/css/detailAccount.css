@@ -1,0 +1,121 @@
+h2 {
+    font-family: Arial, cursive;
+    color: rgba(49, 78, 99, 0.70);
+    text-shadow: 0 0 0.5px #000000;
+}
+
+h1 {
+    font-family: Arial, cursive;
+    color: #fff242;
+    text-shadow: 0 0 0.5px #000000;
+}
+
+table {
+    font-family: Arial, cursive;
+    color: #fff242;
+    text-shadow: 0 0 0.5px #000000;
+    font-size: 18px;
+    border-radius: 15px;
+    border-spacing: 1px;
+    text-align: center;
+    width: 650px;
+}
+
+th {
+    background: rgba(0, 0, 0, 0.70);
+    text-shadow: 0 0 0.5px #000000;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: rgba(0, 0, 0, 0.70);
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+td {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.70);
+}
+
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+tr td:last-child {
+    border-right: none;
+}
+
+
+body {
+    background: rgba(0, 0, 0, 0.70);
+}
+
+.form {
+    width: 730px;
+    height: 530px;
+    background: #fff242;
+    padding: 20px;
+    border-radius: 10%;
+    border: rgba(0, 0, 0, 0.70) solid 5px;
+}
+
+.button {
+    font-size: 30px;
+    border: none;
+    background: #fff242;
+    outline: none;
+    transition: 0.2s;
+    color: rgba(61, 40, 20, 0.99);
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+#btn1 {
+    color: red;
+}
+
+#btn2 {
+    color: green;
+}
+
+.btn:hover {
+    background: antiquewhite;
+}
+
+.btn:active {
+    margin-top: 1px;
+}
+
+.button:hover {
+    filter: brightness(70%);
+}
+
+.button:active {
+    margin-top: 25px;
+}

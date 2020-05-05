@@ -1,0 +1,76 @@
+h3 {
+    font-family: Arial, cursive;
+    color: rgba(49, 78, 99, 0.70);
+    text-shadow: 0 0 0.5px #000000;
+}
+
+h1 {
+    font-family: Arial, cursive;
+    color: rgba(49, 78, 99, 0.70);
+    text-shadow: 0 0 0.5px #000000;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.70);
+
+}
+
+.newAccountForm {
+    width: 320px;
+    height: 590px;
+    background: #fff242;
+    margin-top: 80px;
+    padding: 20px;
+    border-radius: 7%;
+    border: rgba(0, 0, 0, 0.70) solid 5px;
+}
+
+#credForm {
+    height: 500px;
+}
+
+.newAccountInput {
+    border-radius: 10px;
+    padding-left: 15px;
+    height: 25px;
+    outline: none;
+    border: rgba(0, 0, 0, 0.70) solid 2px;
+    color: black;
+}
+
+.button {
+    font-size: 45px;
+    border: none;
+    background: #fff242;
+    outline: none;
+    transition: 0.2s;
+    color: rgba(61, 40, 20, 0.99);
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.button:hover {
+    filter: brightness(80%);
+}
+
+.button:active {
+    margin-top: 25px;
+}
+
+#birthInput {
+    width: 162px;
+    height: 27px;
+}
+
+#dateInput {
+    width: 162px;
+    height: 27px;
+}
+
+#spis1 {
+
+}
+
+#spis2 {
+
+}

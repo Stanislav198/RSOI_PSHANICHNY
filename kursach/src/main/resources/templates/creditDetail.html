@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/../static/css/newEditAccount.css"
+          th:href="@{/css/newEditAccount.css}"/>
+    <link rel="stylesheet" type="text/css" href="C:/kursach/src/main/resources/static/css/newEditAccount.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <title>Credits</title>
+</head>
+<body>
+<div align="center">
+    <div class="newAccountForm" id="credForm">
+        <h1>Credits</h1>
+        <form action="" method="post" th:action="@{/saveDetail} " th:object="${account}">
+
+            <input style="position: absolute; display: none" class="newAccountInput" type="text" th:field="*{id}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text" th:field="*{login}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{password}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{birthdate}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{value}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{depositname}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{depositpercent}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text" th:field="*{sex}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{depositvalue}">
+            <input style="display: none; position: absolute;" class="newAccountInput" type="text"
+                   th:field="*{depositdate}">
+
+            <h3>Credit Date</h3><input class="newAccountInput" id="dateInput" required type="date"
+                                       th:field="*{creditdate}">
+            <h3>Credit Value</h3><input class="newAccountInput" required type="number" th:field="*{creditvalue}">
+
+            <h3>Bank</h3><select class="newAccountInput" id="spis1" required
+                                 th:field="*{creditname}">
+            <option value="Cashalot">Cashalot</option>
+            <option value="Student">Student</option>
+            <option value="Vrach">Vrach</option>
+            <option value="Social">Social</option>
+            <option value="Pensiyneri">Pensiyneri</option>
+            <option value="Rebenok">Rebenok</option>
+            <option value="Nedvizemosti">Nedvizemosti</option>
+
+        </select>
+            <h3>Credit Percent</h3><select class="newAccountInput" id="spis2" required
+                                           th:field="*{creditpercent}">
+            <option value="10">10%</option>
+            <option value="12">12%</option>
+            <option value="13">13%</option>
+            <option value="14">14%</option>
+            <option value="15">15%</option>
+            <option value="17">17%</option>
+            <option value="19">19%</option>
+
+        </select></br>
+
+            <button class="button" type="submit">
+                <i class="fas fa-save"></i>
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+</html>

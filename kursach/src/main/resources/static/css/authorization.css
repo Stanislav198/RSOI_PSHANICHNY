@@ -1,0 +1,51 @@
+h3{
+    font-family: Arial , cursive;
+    color: rgba(49,78,99,0.70);
+    text-shadow: 0 0 0.5px #000000;
+}
+h1{
+    font-family: Arial, cursive;
+    color: rgba(49,78,99,0.70);
+    text-shadow: 0 0 0.5px #000000;
+}
+
+body {
+    background: rgba(0,0,0,0.70);
+
+}
+
+.authForm {
+    width: 290px;
+    height: 330px;
+    background: #fff242;
+    margin-top: 70px;
+    padding: 20px;
+    border-radius: 10%;
+    border: rgba(0, 0, 0, 0.70) solid 5px;
+}
+.loginInput{
+    border-radius: 10px;
+    padding-left: 5px;
+    height: 25px;
+    outline: none;
+    border: rgba(0,0,0,0.70) solid 2px;
+    color: black;
+}
+.sendButton{
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 30px;
+    background: rgba(255,216,37,0.74);
+    font-weight: bold;
+    color: rgba(49,78,99,0.70);
+    text-shadow: 0 0 0.5px #000000;
+    width: 60px;
+    border: rgba(0,0,0,0.70) solid 2px;
+}
+.sendButton:hover{
+    filter: brightness(94%);
+}
+.sendButton:active{
+    margin-top: 10px;
+}
